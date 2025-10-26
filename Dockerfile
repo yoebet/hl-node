@@ -32,6 +32,8 @@ RUN curl -o /home/$USERNAME/hl-visor $HL_VISOR_URL \
     && gpg --verify /home/$USERNAME/hl-visor.asc /home/$USERNAME/hl-visor \
     && chmod +x /home/$USERNAME/hl-visor
 
+RUN cp override_gossip_config.json /home/$USERNAME/
+
 # Expose gossip ports
 EXPOSE 3001 4000-4010
 
