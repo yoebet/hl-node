@@ -6,6 +6,7 @@ services:
     build: .
     ports:
       - "4000-4010:4000-4010"
+      - "25602:3001"
     volumes:
       - /home/ubuntu/hyperliquid/hl-data:/home/hluser/hl/data
 
